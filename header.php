@@ -16,4 +16,4 @@ $image = wp_get_attachment_image_src($custom_logo_id, 'full');
 ?>
 
 <body <?php body_class(is_front_page() ? 'fixed-header' : 'fixed-header'); ?>>
-    <header>This is the header</header>
+    <header>This is the header 2.0</header>
