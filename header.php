@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html <?php language_attributes(); ?>>
+
+<head>
+    <meta charset="<?php bloginfo('charset'); ?>">
+    <meta name="theme-color" content="#1e0014">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="profile" href="https://gmpg.org/xfn/11">
+    <?php wp_enqueue_script('script', get_template_directory_uri() . '/assets/bbb-downloader.min.js', [], '1.0.0'); ?>
+    <?php wp_head(); ?>
+</head>
+
+<?php
+$custom_logo_id = get_theme_mod('custom_logo');
+$image = wp_get_attachment_image_src($custom_logo_id, 'full');
+?>
+
+<body <?php body_class(is_front_page() ? 'fixed-header' : 'fixed-header'); ?>>
+    <canvas class="bg"></canvas>
+    <div class="menu">
+        <header class="top fx-row fx-center">
+            <span>Big Blue Button Downloader</span>
+            <span class="flex"></span>
+            <div class="nav-btn" onclick="document.body.classList.toggle('show-menu')">
+                Close
+            </div>
+        </header>
+        <nav>
+            <div class="sub-title">Recent</div>
+
+            <?php
+            $args = array(
+                'post_type' => 'post'
+            );
+
+            $post_query = new WP_Query($args);
+
+            if ($post_query->have_posts()) {
+                while ($post_query->have_posts()) {
+                    $post_query->the_post();
+            ?>
+                    <a href="<?php the_permalink(); ?>" class="article-link">
+                        <div class="preview-img" style="background-image: url('<?php echo wp_get_attachment_url(get_post_thumbnail_id($post->ID)); ?>');"></div>
+                        <div class="art-title">
+                            <?php the_title(); ?>
+                            <div class="tagline">
+                                <?php
+                                echo get_the_date('F Y');
+                                ?>
+                            </div>
+                        </div>
+                    </a>
+            <?php
+                }
+            }
+            ?>
+        </nav>
+    </div>
+    <div class="backdrop" onclick="document.body.classList.toggle('show-menu')"></div>
+    <header class="top main white fx-row fx-center">
+        
+        <span class="flex"></span>
+        <div class="nav-btn" onclick="document.body.classList.toggle('show-menu')">
+            Articles
+        </div>
+        <a href="/about-me" class="nav-btn">
+            About Me
+        </a>
+    </header>
