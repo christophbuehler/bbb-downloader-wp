@@ -27,6 +27,11 @@ body {
         }
     }
 
+    blockquote {
+        border-left: 2px solid #ffaa00;
+        background: rgba(255, 200, 0, .1);
+    }
+
     .content {
         line-height: 24px;
         margin: 0 auto;
@@ -89,13 +94,10 @@ body {
 
             .cite {
                 border-radius: 8px;
-                background: #ffe200;
                 padding: 8px;
-            }
-
-            blockquote {
-                border-left: 2px solid #ffaa00;
-                background: rgba(255, 200, 0, .1);
+                background: #eee;
+                margin-bottom: 16px;
+                display: block;
             }
 
             .btn {
