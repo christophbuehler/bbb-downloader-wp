@@ -16,14 +16,12 @@ function ready() {
   input.addEventListener('change', updateLink);
   input.addEventListener('keyup', updateLink);
 
-  const hasError = true;
+  let hasError = true;
 
   function updateLink() {
     const link = input.value;
     const err = getError(link);
-    downloadBtn.disabled = true;
-    genDiv.classList.toggle('invalid', Boolean(err));
-    genDiv.classList.toggle('valid', !Boolean(err));
+    hasError = true;
     
     if (Boolean(err)) {
       showError(err);
@@ -39,7 +37,7 @@ function ready() {
     }
   
     hideError();
-    downloadBtn.disabled = false;
+    hasError = false;
   }
 
   function getError(link: string): string {
@@ -48,10 +46,15 @@ function ready() {
   }
 
   function hideError() {
+    genDiv.classList.toggle('invalid', false);
+    genDiv.classList.toggle('valid', true);
+
     errDiv.style.display = 'none';
   }
   
   function showError(err: string) {
+    genDiv.classList.toggle('invalid', true);
+    genDiv.classList.toggle('valid', false);
     errDiv.innerHTML = err;
     errDiv.style.display = 'block';
   }
