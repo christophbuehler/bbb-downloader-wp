@@ -17,5 +17,7 @@ $image = wp_get_attachment_image_src($custom_logo_id, 'full');
 
 <body <?php body_class(is_front_page() ? 'fixed-header' : 'fixed-header'); ?>>
     <header>
-        <div>Big Blue Button Downloader</div>
+        <div>
+            <h1>Big Blue Button Downloader</h1>
+        </div>
     </header>
