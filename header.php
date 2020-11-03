@@ -6,6 +6,7 @@
     <meta name="theme-color" content="#1e0014">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="profile" href="https://gmpg.org/xfn/11">
+    <script data-ad-client="ca-pub-9173668323910817" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
     <?php wp_enqueue_script('script', get_template_directory_uri() . '/assets/bbb-downloader.min.js', [], '1.0.0'); ?>
     <?php wp_head(); ?>
 </head>
