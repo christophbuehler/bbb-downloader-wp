@@ -5,9 +5,6 @@ export default () => {
 };
 
 function ready() {
-  // const meetingLink = 'https://bbb-scale.univie.ac.at/playback/presentation/2.0/playback.html?meetingId=ab96390226077858e4976a070069d6b1b73f7ff4-1604297356406';
-  // const downloadLink = generateBbbDownloadLink(meetingLink);
-
   const genDiv = document.querySelector('.link-generator') as HTMLDivElement;
   const errDiv = document.querySelector('.error') as HTMLDivElement;
   const downloadBtn = document.querySelector('.btn') as HTMLLinkElement;
