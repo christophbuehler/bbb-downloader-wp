@@ -127,7 +127,7 @@ body {
                 font-weight: 400;
                 color: #fff;
                 border: 1px solid #ddd;
-                background-image: linea-gradient(#00aa22, #00ea22);
+                background-image: linear-gradient(#00aa22, #00ea22);
 
                 &:focus {
                     box-shadow: 0 0 2px 2px rgba(0, 0, 0, .2);
@@ -135,7 +135,7 @@ body {
 
                 &:active {
                     outline: 8px solid rgba(0, 0, 0, .1);
-                    background-image: linea-gradient(#008811, #009911);
+                    background-image: linear-gradient(#008811, #009911);
                 }
             }
         }
