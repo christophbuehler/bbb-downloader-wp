@@ -32,6 +32,7 @@ body {
         margin: 0 auto;
         max-width: $content-width;
         padding: 0 $content-padding;
+        font-size: 14px;
 
         .link-generator {
             border: 2px solid rgba(0, 0, 0, .4);
@@ -73,16 +74,19 @@ body {
                 width: 100%;
                 box-sizing: border-box;
                 margin-bottom: 16px;
-                border-radius: 4px;
                 background: transparent;
+                background: #fff;
+                font-size: 14px;
+
+                &.focus {
+                    outline: 4px solid rgba(0,0,0,.1);
+                }
             }
 
             .error {
                 color: red;
                 padding: 16px 0;
                 display: none;
-                background: red;
-                color: #fff;
             }
 
             .btn {

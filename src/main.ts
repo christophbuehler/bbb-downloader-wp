@@ -32,7 +32,7 @@ function ready() {
       const downloadLink = generateBbbDownloadLink(link);
       downloadBtn.href = downloadLink;
     } catch(e) {
-      showError(e.message);
+      showError('The provided Big Blue Button Download link seems to be invalid. Please try a different link.');
       return;
     }
   

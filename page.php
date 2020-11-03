@@ -23,7 +23,7 @@ get_header();
     <div class="link-generator">
         <div class="title">Download Big Blue Button Video</div>
         <div class="descr">Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel nostrum dolore veritatis modi quas voluptates vitae aspernatur doloribus eveniet exercitationem, ullam repudiandae, labore non culpa quisquam quibusdam magni, nemo aliquam.</div>
-        <input type="text" placeholder="Enter Big Blue Button Link">
+        <input type="text" placeholder="Enter Big Blue Button Link...">
         <a href="#" download class="btn" disabled>Download Big Blue Button Video</a>
         <div class="error"></div>
     </div>
