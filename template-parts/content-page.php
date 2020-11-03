@@ -27,7 +27,7 @@
 
 		<?php bbbdownloadercom_post_thumbnail(); ?>
 
-		<div class="content">
+		<div class="content-2">
 			<?php
 			the_content(sprintf(
 				wp_kses(

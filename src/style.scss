@@ -7,7 +7,7 @@ body {
     font-family: system-ui,BlinkMacSystemFont,-apple-system,Segoe UI,Roboto,Oxygen,Ubuntu,Cantarell,Fira Sans,Droid Sans,Helvetica Neue,sans-serif;
 
     header {
-        background: #fff;
+        background: #44aa77;
         box-shadow: 0 0 2px 2px rgba(0, 0, 0, .2);
 
         >div {
@@ -87,6 +87,17 @@ body {
                 display: none;
             }
 
+            .cite {
+                border-radius: 8px;
+                background: #ffe200;
+                padding: 8px;
+            }
+
+            blockquote {
+                border-left: 2px solid #ffaa00;
+                background: rgba(255, 200, 0, .1);
+            }
+
             .btn {
                 display: none;
                 text-align: center;
@@ -95,14 +106,21 @@ body {
                 border: 1px solid rgba(0, 0, 0, .1);
                 cursor: pointer;
                 text-decoration: none;
-                background: #001188;
-                border-radius: 8px;
-                font-size: 22px;
-                font-weight: bold;
+                border-radius: 0;
+                font-size: 18px;
+                font-weight: 400;
                 color: #fff;
                 border: 1px solid #ddd;
-                text-shadow: 0 1px 0 rgba(255, 255, 255, .6);
-                background-image: linear-gradient(#0011ff, #001188);
+                background-image: linea-gradient(#00aa22, #00ea22);
+
+                &:focus {
+                    box-shadow: 0 0 2px 2px rgba(0, 0, 0, .2);
+                }
+
+                &:active {
+                    outline: 8px solid rgba(0, 0, 0, .1);
+                    background-image: linea-gradient(#008811, #009911);
+                }
             }
         }
     }
